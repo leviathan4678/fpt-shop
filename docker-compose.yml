@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  bola-payment-app:
+    build: .
+    container_name: bola-payment-app
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
